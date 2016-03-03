@@ -1,0 +1,11 @@
+package controller;
+
+import javafx.fxml.Initializable;
+
+public class MyController implements Initializable{
+
+	@override
+	public void initialize(URL arg0, ResourceBundle arg1){
+		
+	}
+}

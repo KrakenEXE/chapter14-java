@@ -1,0 +1,48 @@
+package application;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.*;
+import javafx.scene.control.*;
+
+public class GUIController {
+
+	@FXML
+	private Button formatName;
+	
+	@FXML
+	private TextField firstName;
+	
+	@FXML
+	private TextField middleName;
+	
+	@FXML
+	private TextField lastName;
+	
+	@FXML
+	private TextField title;
+	
+	@FXML
+	private Label formattedName;
+
+	
+	public void initialize(){
+		
+	}
+	
+	public void clickSinister(ActionEvent event){
+		formattedName.setText(title+". "+firstName+" "+middleName+" "+lastName
+							+"\n"+firstName+" "+middleName+" "+lastName
+							+"\n"+firstName+" "+lastName
+							+"\n"+lastName+", "+firstName+" "+middleName+", "+title+"."
+							+"\n"+lastName+", "+firstName+" "+middleName
+							+"\n"+lastName+", "+firstName
+							);
+	}
+
+	
+}

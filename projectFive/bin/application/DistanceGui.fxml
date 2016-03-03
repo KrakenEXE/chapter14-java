@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="application.DistanceController">
+   <children>
+      <Pane prefHeight="382.0" prefWidth="454.0">
+         <children>
+            <Button fx:id="fiveHours" layoutX="56.0" layoutY="92.0" mnemonicParsing="false" onAction="#clickFive" text="5 Hours" />
+            <Button fx:id="eightHours" layoutX="151.0" layoutY="92.0" mnemonicParsing="false" onAction="#clickEight" text="8 Hours" />
+            <Button fx:id="twelveHours" layoutX="239.0" layoutY="92.0" mnemonicParsing="false" onAction="#clickTwelve" text="12 Hours" />
+            <TextField fx:id="carSpeed" layoutX="122.0" layoutY="34.0" promptText="Car Speed" />
+            <Label fx:id="outputSpeed" layoutX="31.0" layoutY="174.0" text="SPEED OUTPUT" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+package application;
+
+public class TipController {
+
+	package application;
+
+	import java.net.URL;
+	import java.util.ResourceBundle;
+
+	import javafx.event.ActionEvent;
+	import javafx.fxml.FXML;
+	import javafx.fxml.Initializable;
+	import javafx.scene.*;
+	import javafx.scene.control.*;
+
+	public class GUIController {
+
+		private double tip, tax, total = 0;
+		
+		@FXML
+		private Button formatName;
+		
+		@FXML
+		private TextField mealPrice;
+		
+		@FXML
+		private Label formattedName;
+
+		
+		public void initialize(){
+			
+		}
+		
+		public void clickFormat(ActionEvent event){
+			tip = Double.parseDouble(mealPrice.getText()) * 0.18;
+			tax = Double.parseDouble(mealPrice.getText()) * 0.07;
+			total = Double.parseDouble(mealPrice.getText()) +tax + tip
+					;
+			formattedName.setText("The meal was - "+mealPrice.getText()
+								+"\nThe tip is "+tip
+								+"\nThe Tax is "+tax
+								+"\nThe Total is"+total
+					);
+		}
+
+		
+	}
+
+}

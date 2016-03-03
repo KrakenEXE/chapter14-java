@@ -1,0 +1,39 @@
+package controller;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
+public class MyController implements Initializable{
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1){
+		
+	}
+	String hello1, hello3;
+	public double hello4, hello2;
+	@FXML
+	private Button calculateButton;
+	
+	@FXML
+	private TextField itemPrice;
+	
+	@FXML
+	private TextField markupPercent;
+	
+	@FXML
+	private Label markupTotal;
+	
+	public void buttonClick(ActionEvent event){
+		hello1 = markupPercent.getText();
+		
+		markupTotal.setText("The total price markup is "+(markupPercent.getText() * itemPrice));
+		
+	}
+}

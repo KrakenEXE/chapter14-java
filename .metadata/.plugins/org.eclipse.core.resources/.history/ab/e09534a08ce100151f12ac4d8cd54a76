@@ -1,0 +1,43 @@
+package application;
+
+import java.net.URL;
+import java.text.NumberFormat;
+import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.*;
+import javafx.scene.control.*;
+
+
+public class DistanceController {
+
+	private double totalDistance=0;
+	
+	@FXML
+	private Button fiveHours;
+	
+	@FXML
+	private Button eightHours;
+	
+	@FXML
+	private Button twelveHours;
+	
+	@FXML
+	private TextField carSpeed;
+	
+	@FXML
+	private Label outputSpeed;
+
+	
+	public void initialize(){
+		
+	}
+	
+	public void clickFive(ActionEvent event){
+		totalDistance = Double.parseDouble(carSpeed.getText())*5;
+		outputSpeed.setText("In five hours at"+carSpeed.getText()+" you went "+totalDistance+" Miles");
+	}
+		
+}
